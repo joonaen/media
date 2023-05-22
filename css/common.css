@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'TOP_GUN';
+    src: url('../TOP_GUN.ttf') format('truetype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+/* Reset CSS */
+* { margin:0; padding:0; border:0; outline:0; vertical-align:top; 
+    -webkit-text-size-adjust:none; box-sizing: border-box; } 
+html { font-size: 18px; } 
+body { font-family:'Roboto', sans-serif; font-size:18px; color:#fff; } 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; } 
+ul, ol, dl { list-style:none; } 
+img, video { border:0; vertical-align:top; } 
+a, a:link {text-decoration:none; } 
+a:visited { color: #e2b74d;} 
+a:hover, a:active { text-decoration:none; } 
+table { border-collapse:collapse; border-spacing:0; } 
+input, select { vertical-align:middle; } 
+label { cursor:pointer; } 
+.blind,legend,hr,caption { display:block; overflow:hidden; position:absolute; top:0; left:-1000em; } 
+i,em,address { font-style:normal; font-weight:normal; } 
+p,li,dd { line-height:1.5em } 
+.hidden, #skipNav { display: block; position: absolute; left:-1000%; top:0; width: 1px; height: 1px; overflow: hidden; color: #fff; } 
+img { width: 100%; } 
+
+
+
+.videoBox { width:100%; height:100%; overflow:hidden; position:absolute } 
+#videoBG { 
+ position:fixed; /* 고정 => fixed / 스크롤처리 => absolute */
+ left:50%; 
+ top:50%; /* 오른쪽, 아래에 여백을 두지않고 꽉차게 표시 */
+ width:auto; 
+ min-width:100%; /* 동영상 너비를 꽉차게 */
+ height:auto; 
+ min-height:100%; /* 동영상 높이를 꽉차게 */
+ transform:translateX(-50%) translateY(-50%); 
+ z-index:-100; /* 다른요소보다 아래에 위치 */
+}
+#imgBG { 
+position:fixed; /* 고정=>fixed/ 스크롤처리=>absolute */
+ left:50%; 
+ top:50%; /* 오른쪽, 아래에 여백을 두지않고 꽉차게 표시*/
+ width:auto; 
+ min-width:100%; /* 동영상 너비를 꽉차게 */
+ height:auto; 
+ min-height:100%; /* 동영상 높이를 꽉차게 */
+ transform:translateX(-50%) translateY(-50%); 
+ z-index:-100; 
+ display:none; 
+}
+
+@keyframes ani {
+	0% { top: -10px;}
+	100% { top: 10px;}
+}	
+.videoBox .down { position: absolute; left: 50%; bottom: 60px; transform: translateX(-50%); display: block; width: 120px; height: 80px; font-size: 18px;  color: #fff; text-align: center; padding: 10px 0 0; z-index: 2; } 
+.videoBox .down i{display: block; transform: rotate(180deg); font-size: 36px; margin-bottom: 30px; position: relative; top: -10px; animation: ani .5s infinite alternate;}
+
+/* 헤더 공통 영역 */
+#wrap { width:100%; overflow: hidden } 
+#headerArea { position:fixed; z-index: 30; height: 70px; background: rgba(0,0,0,.3); left:0; top: 0; width: 100%; font-family: TOP_GUN; } 
+#headerArea .headerInner { display: flex; justify-content: space-between; margin: 0 5%; overflow: hidden; } 
+#headerArea h1 { margin-top: 15px } 
+#headerArea h1 a { display: block; color: #fff; width: 150px; height: 40px; background: url("../images/logo.png") no-repeat; background-size: 100% auto; text-indent: -999%; overflow: hidden;} 
+
+#headerArea .headerInner .menuTrigger { position: absolute; right: 10px; top: 0; display: none; width: 40px; height: 40px; margin-top: 10px; font-size: 0; text-indent: -9999%; z-index: 99; } 
+#headerArea .headerInner .menuTrigger span { position: absolute; left: 50%; top: 50%; margin: -1px 0 0 -15px; width: 30px; height: 5px; background: #fff; display: block;border-radius: 5px; } 
+#headerArea .headerInner .menuTrigger::before { top: 7px;  content: ''; position: absolute; left: 5px; display: block; width: 30px; height: 5px; background: #fff; transition: transform .3s;  border-radius: 5px;}
+#headerArea .headerInner .menuTrigger::after { bottom: 5px;  content: ''; position: absolute; left: 5px; display: block; width: 30px; height: 5px; background: #fff; transition: transform .3s;  border-radius: 5px;} 
+#headerArea .headerInner .menuTrigger span::before, #headerArea .headerInner .menuTrigger span::after { content: ''; position: absolute; left: 0; display: block; width: 30px; height: 5px; background: #fff; transition: transform .3s;  border-radius: 5px;} 
+#headerArea.menuCurrent  .menuTrigger span{opacity: 0;}
+#headerArea.menuCurrent  .menuTrigger::after{bottom: 15px; transform: rotate(45deg)scale(1.2);}
+#headerArea.menuCurrent  .menuTrigger::before{top: 20px;transform: rotate(-45deg) scale(1.2);}
+#headerArea #gnb { margin-top: 40px } 
+#headerArea #gnb ul { display: flex; } 
+#headerArea #gnb ul li { margin-right: 15px; } 
+#headerArea #gnb ul li a { color: #fff; text-decoration: none; transition: all .5s; font-size: 20px; line-height: 0; letter-spacing :2px; font-weight: normal;} 
+#headerArea #gnb ul li:hover a{color: #bd0926;}
+/* #headerArea #gnb ul li:hover a { color: #f7a7bb; }  */
+
+#footerArea{background: #e2b74d; padding: 50px 0;}
+#footerArea .footerLogo{background: url(../images/footerlogo.png) no-repeat center; background-size: cover; display: block; width: 330px; height: 97.5px;margin: 0 auto 50px;text-indent: -999%; overflow: hidden;}
+#footerArea p{text-align: center;}
+#footerArea .topMove{background: url(../images/topmove.png) no-repeat center; width: 120px; height: 40px; position: fixed; left: 50%; bottom: 10%; margin-left: 30%;display: none;}
+
+
+
+@media screen and (max-width:1280px) {
+	
+}
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+	
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+    #headerArea #gnb{position: fixed;
+        top: 0;
+        left:0;
+        background: #000;
+        width: 100%;
+        height: 100%;
+        margin: 0;}
+    #headerArea #gnb ul{display: block; margin-top: 200px;}
+    #headerArea #gnb ul li{text-align: center; margin-bottom: 80px;}
+    #headerArea #gnb ul li a{font-size: 3rem; color: #bd0926;}
+    #footerArea .topMove{margin-left: 20%;}
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+	
+}
+
+@media screen and (max-width:480px) {
+	#wrap { min-width:320px; }
+}
+
+
+

@@ -1,0 +1,237 @@
+#imgBG { display: block; }
+#content{position: relative;}
+#content h2{position: absolute; top: -500px; text-align: center; font-size: 70px; width: 100%; font-family: 'TOP_GUN'; letter-spacing: 10px; text-shadow: 10px 5px #bd0926;  }
+
+#content h3{font-size: 2.5rem; font-family: 'TOP_GUN'; letter-spacing: 5px; font-weight: normal; color: #bd0926;}
+#content .conTop{position: relative;}
+
+#content .char{padding-top: 100px; margin-top: -20%;}
+
+/* #content .char ul:nth-child(1) li img{object-fit: cover; object-position: right; width: 100%; height: 100%; transform: skewX(15deg) scale(1.2); }
+#content .char ul:nth-child(1) li:nth-child(odd) img{transform: skewX(-15deg);}
+#content .char ul:nth-child(1) li:nth-child(even) img{transform: skewX(15deg) scale(1.35);}
+#content .char ul:nth-child(1) li{overflow: hidden; margin-bottom: 100px;position: relative; }
+#content .char ul:nth-child(1) li:nth-child(odd) span{width: 40%; left: 10%; position: relative; height: 600px; display: block;  transform: skewX(15deg); overflow: hidden;}
+#content .char ul:nth-child(1) li:nth-child(even) span{width: 40%; left: 50%; position: relative; height: 600px; display: block; transform: skewX(-15deg);overflow: hidden;}
+#content .char ul:nth-child(1) li:nth-child(odd):hover .charInner{opacity: 1; left: 0; }
+#content .char ul:nth-child(1) li:nth-child(even):hover .charInner{opacity: 1; right: 0; }
+
+#content .char ul:nth-child(1) li:nth-child(odd) strong{position:absolute; left: -100%; top: 5%; padding: 10px; background: rgba(0,0,0,.7); transition: all .5s ease; opacity: 0; background: rgba(189,9,38,.7); color: #fff;}
+#content .char ul:nth-child(1) li:nth-child(odd) p{position: absolute; right: -100%; bottom: 0; width: 50%; background: rgba(0,0,0,.7); padding: 20px 40px; transition: all .5s ease; opacity: 0;  background: rgba(21,61,115,.7);text-align: justify;}
+#content .char ul:nth-child(1) li:nth-child(odd):hover strong{opacity: 1; left: 40%; }
+#content .char ul:nth-child(1) li:nth-child(odd):hover p{opacity: 1; right: 10%; }
+#content .char ul:nth-child(1) li:nth-child(even) strong{position:absolute; right: -100%; top: 5%; padding: 10px; background: rgba(0,0,0,.7); transition: all .5s ease; opacity: 0; background: rgba(189,9,38,.7); color: #fff;}
+#content .char ul:nth-child(1) li:nth-child(even) p{position: absolute; left: -100%; bottom: 0; width: 50%; background: rgba(0,0,0,.7); padding: 20px 40px; transition: all .5s ease; opacity: 0; background: rgba(21,61,115,.7); text-align: justify;}
+#content .char ul:nth-child(1) li:nth-child(even):hover strong{opacity: 1; right: 40%; }
+#content .char ul:nth-child(1) li:nth-child(even):hover p{opacity: 1; left: 10%; } */
+#content .char .mainChar{margin-bottom: 150px;}
+#content .char .mainChar li{overflow: hidden; display: flex; position: relative;}
+#content .char .mainChar li span{width:30%; display: block;  clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%); overflow: hidden; margin-right: 10%; }
+#content .char .mainChar li:nth-child(1) span{background: url(../images/char1.jpeg) no-repeat center top;}
+#content .char .mainChar li:nth-child(2) span{background: url(../images/char2.jpeg) no-repeat center top;}
+#content .char .mainChar li:nth-child(3) span{background: url(../images/char3.jpeg) no-repeat center top;}
+
+#content .char .mainChar li dl{width: 60%;  clip-path: polygon(5% 0, 100% 0%, 100% 100%, 0% 100%); background: rgba(21,61,115,.7); padding: 100px 0 0 100px;}
+#content .char .mainChar li dt{padding: 50px; font-size: 2rem; font-family: 'TOP_GUN'; letter-spacing: 5px; font-weight: normal; line-height: 3rem;}
+#content .char .mainChar li dd{padding: 50px; line-height: 3rem; font-size: 1.5rem;     font-family: 'Roboto', sans-serif; margin-bottom: 150px;}
+#content .char .mainChar li:nth-child(2) span{clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);order: 2; margin: 0 0 0 10%;}
+#content .char .mainChar li:nth-child(2) dl{background: rgba(189,9,38,.7);clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);padding: 100px 100px 0 0;order:1;}
+
+#content .char .mainChar li span img:hover{transform: scale(1.2);}
+
+#content .char .sub{background: rgba(0,0,0,.7); padding: 100px 0;}
+#content .char .subChar{ padding: 50px; position: relative;}
+#content .char .subChar::after{content: ''; display: block; clear: both;}
+
+#content .char .sub .subTop h3{text-align: center;}
+/* #content .char .subChar li{position: relative;float: left; width: 33.33%;} */
+#content .char .subChar li{width: 33.33%;  float: left;  position: relative; transition: all .5s ease; }
+#content .char .subChar li img{filter: grayscale(1); transition: all .5s ease;}
+#content .char .subChar li:nth-child(1) span,
+#content .char .subChar li:nth-child(2) span,
+#content .char .subChar li:nth-child(3) span{clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%); bottom: 0;  position: relative; display: block;transition: all .5s ease; z-index: 30;}
+
+
+#content .char .subChar li:nth-child(4) span,
+#content .char .subChar li:nth-child(5) span,
+#content .char .subChar li:nth-child(6) span{clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0% 100%);top: 0; position: relative; display: block;transition: all .5s ease; z-index: 30;}
+
+#content .char .subChar li:nth-child(1) span::before{content: 'PHOENIX'; display: block; position: absolute; right: 0; bottom: -24.5%; transform: rotate(90deg); color: #fff;  transform-origin:right top; text-align: left;}
+#content .char .subChar li:nth-child(2) span::before{content: 'BOB';  display: block; position: absolute; right: 0; bottom: -24.5%; transform: rotate(90deg); color: #fff;   transform-origin:right top; text-align: left;}
+#content .char .subChar li:nth-child(3) span::before{content: 'COYOTE'; display: block; position: absolute; right: 0; bottom: -24.5%; transform: rotate(90deg); color: #fff;   transform-origin:right top; text-align: left;}
+
+#content .char .subChar li:nth-child(4) span::before{content: 'CYCLONE'; display: block; position: absolute; left: -100%; bottom:0; color: #fff;  transform: rotate(90deg); transform-origin:right bottom; text-align: right;}
+#content .char .subChar li:nth-child(5) span::before{content: 'FANBOY'; display: block; position: absolute; left: -100%; bottom: 0; color: #fff;  transform: rotate(90deg); transform-origin:right bottom; text-align: right;}
+#content .char .subChar li:nth-child(6) span::before{content: 'PAYBACK'; display: block; position: absolute;left: -100%; bottom: 0; color: #fff;  transform: rotate(90deg); transform-origin:right bottom; text-align: right;}
+
+#content .char .subChar li span::before{background: rgba(21,61,115,.7); width: 100%; text-align: right;   padding: 10%; box-sizing: border-box; z-index: 5;font-size: 1.5rem;}
+
+#content .char .subChar li:hover img{filter: grayscale(0);}
+#content .char .subChar li:nth-child(1):hover span{bottom: -50px;}
+#content .char .subChar li:nth-child(2):hover span{bottom: -50px;}
+#content .char .subChar li:nth-child(3):hover span{bottom: -50px;}
+#content .char .subChar li:nth-child(4):hover span{top: -50px;}
+#content .char .subChar li:nth-child(5):hover span{top: -50px;}
+#content .char .subChar li:nth-child(6):hover span{top: -50px;}
+
+#content .char .subChar li:nth-child(1) .charInfo,
+#content .char .subChar li:nth-child(2) .charInfo,
+#content .char .subChar li:nth-child(3) .charInfo{position: absolute; top: 0; display: block; transition: all .5s ease; padding: 15px; font-size: 14px;}
+#content .char .subChar li:nth-child(1):hover .charInfo{top: -8%; z-index: 20; background: #bd0926;}
+#content .char .subChar li:nth-child(2):hover .charInfo{top: -8%; z-index: 20; background: #bd0926;}
+#content .char .subChar li:nth-child(3):hover .charInfo{top: -8%; z-index: 20; background: #bd0926;}
+
+#content .char .subChar li:nth-child(4) .charInfo,
+#content .char .subChar li:nth-child(5) .charInfo,
+#content .char .subChar li:nth-child(6) .charInfo{position: absolute; bottom: 0;display: block; transition: all .5s ease;padding: 15px;font-size: 14px;}
+
+#content .char .subChar li:nth-child(4):hover .charInfo{bottom: -8%; z-index: 20; background: #bd0926;}
+#content .char .subChar li:nth-child(5):hover .charInfo{bottom: -8%; z-index: 20; background: #bd0926;}
+#content .char .subChar li:nth-child(6):hover .charInfo{bottom: -8%; z-index: 20; background: #bd0926;}
+
+#content .char .subChar li .charInfo{width: 100%;}
+
+svg {
+    font-family: 'TOP_GUN';
+    position: relative; top: -650px;
+    width: 100%; height: 100%;
+  }
+  svg text {
+    text-transform: uppercase;
+    animation: stroke 5s forwards;
+    stroke-width: 2;
+    stroke: #bd0926;
+    font-size: 140px;
+  }
+  @keyframes stroke {
+    0%   {
+      fill: rgba(72,138,20,0); stroke: rgba(189,9,38,1);
+      stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+    }
+    70%  {fill: rgba(72,138,20,0); stroke: rgba(189,9,38,1); }
+    80%  {fill: rgba(72,138,20,0); stroke: rgba(189,9,38,1); stroke-width: 3; }
+    100% {
+      fill: rgba(189,9,38,1); stroke: rgba(189,9,38,0); 
+      stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+    }
+  }
+
+
+
+
+
+
+  @media screen and (max-width:1280px) {
+    #content .char .mainChar li dt{font-size: 1.8rem; padding: 30px;}
+    #content .char .mainChar li dd{font-size: 1.2rem; padding: 30px; line-height: 2.5rem;}
+    #content .char .subChar li:nth-child(4):hover .charInfo{bottom: -20%; z-index: 20; background: #bd0926;}
+    #content .char .subChar li:nth-child(5):hover .charInfo{bottom: -20%; z-index: 20; background: #bd0926;}
+    #content .char .subChar li:nth-child(6):hover .charInfo{bottom: -20%; z-index: 20; background: #bd0926;}
+    
+    
+  }
+  
+  /* 테블릿 */
+  @media screen and (max-width:1024px) {
+    #content .char .mainChar li span{margin-right: 0; clip-path: none;}
+    #content .char .mainChar li dl{width: 70%;clip-path: none;}
+    #content .char .mainChar li dt{font-size: 1.5rem; padding: 30px;}
+    #content .char .mainChar li dd{font-size: 1rem; padding: 30px; line-height: 2rem;}
+    #content .char .mainChar li:nth-child(2) span{margin-left: 0;clip-path: none;}
+    #content .char .mainChar li:nth-child(2) dl{clip-path: none;}
+
+    
+    #content .char .subChar li:nth-child(1) span{bottom: -50px;}
+    #content .char .subChar li:nth-child(2) span{bottom: -50px;}
+    #content .char .subChar li:nth-child(3) span{bottom: -50px;}
+    #content .char .subChar li:nth-child(4) span{top: -50px;}
+    #content .char .subChar li:nth-child(5) span{top: -50px;}
+    #content .char .subChar li:nth-child(6) span{top: -50px;}
+
+    #content .char .subChar li:nth-child(1):hover .charInfo{top: -20%; z-index: 20; background: #bd0926;}
+    #content .char .subChar li:nth-child(2):hover .charInfo{top: -20%; z-index: 20; background: #bd0926;}
+    #content .char .subChar li:nth-child(3):hover .charInfo{top: -20%; z-index: 20; background: #bd0926;}
+    #content .char .subChar li:nth-child(4):hover .charInfo{bottom: -20%; z-index: 20; background: #bd0926;}
+    #content .char .subChar li:nth-child(5):hover .charInfo{bottom: -20%; z-index: 20; background: #bd0926;}
+    #content .char .subChar li:nth-child(6):hover .charInfo{bottom: -20%; z-index: 20; background: #bd0926;}
+
+    #content .char .subChar li:nth-child(1) .charInfo{top: -17%; z-index: 20; background: #bd0926;}
+    #content .char .subChar li:nth-child(2) .charInfo{top: -17%; z-index: 20; background: #bd0926;}
+    #content .char .subChar li:nth-child(3) .charInfo{top: -17%; z-index: 20; background: #bd0926;}
+    #content .char .subChar li:nth-child(4) .charInfo{bottom: -20%; z-index: 20; background: #bd0926;}
+    #content .char .subChar li:nth-child(5) .charInfo{bottom: -20%; z-index: 20; background: #bd0926;}
+    #content .char .subChar li:nth-child(6) .charInfo{bottom: -20%; z-index: 20; background: #bd0926;}
+    
+    
+  }
+  
+  /* 소형 테블릿 */
+  @media screen and (max-width:768px) {
+    #content .char .mainChar li span{display: none;}
+    #content .char .mainChar li:nth-child(1){background: url(../images/char1.jpeg) no-repeat center top; background-size: cover;}
+    #content .char .mainChar li:nth-child(2){background: url(../images/char2.jpeg) no-repeat center top; background-size: cover;}
+    #content .char .mainChar li:nth-child(3){background: url(../images/char3.jpeg) no-repeat center top; background-size: cover;}
+    #content .char .mainChar li dd{margin-bottom: 100px;}
+    #content .char .mainChar li dl{width: 100%; position: relative; padding: 100px 0 0 0;}
+    #content .char .mainChar li:nth-child(2) dl{padding: 100px 0 0 0;}
+    #content .char .subChar li{width: 50%;}
+    #content .char .subChar li:nth-child(3),
+    #content .char .subChar li:nth-child(6){display: none;}
+  }
+  
+  /* 모바일 */
+  @media screen and (max-width:640px) {
+    #content .char .subChar li:nth-child(4),
+    #content .char .subChar li:nth-child(5),
+    #content .char .subChar li{width: 100%; float: none;  margin-bottom: 50px;}
+    #content .char .subChar li:nth-child(1) span,
+    #content .char .subChar li:nth-child(2) span{clip-path: none;  position: relative; bottom: 0;}
+    #content .char .subChar li:nth-child(4) span,
+    #content .char .subChar li:nth-child(5) span{clip-path: none;  position: relative; top: 0;}
+    #content .char .subChar li:nth-child(1)::before,
+    #content .char .subChar li:nth-child(2)::before,
+    #content .char .subChar li:nth-child(4)::before,
+    #content .char .subChar li:nth-child(5)::before{transform: none; bottom: 0; left: 0; text-align: center;}
+    #content .char .subChar li:nth-child(1) .charInfo,
+    #content .char .subChar li:nth-child(2) .charInfo{position: static; top: 0;}
+    
+    #content .char .subChar li:nth-child(4) .charInfo,
+    #content .char .subChar li:nth-child(5) .charInfo{position:static ;}
+    #content .char .subChar li:nth-child(2) span::before,
+    #content .char .subChar li:nth-child(1) span::before{bottom: -25%;}
+      
+  }
+  
+  @media screen and (max-width:480px) {
+    #wrap { min-width:320px; }
+  }
+  
+  
+  
+  
+  
+  
+  svg {
+      font-family: 'TOP_GUN';
+      position: relative; top: -650px;
+      width: 100%; height: 100%;
+    }
+  svg text {
+      text-transform: uppercase;
+      animation: stroke 5s forwards;
+      stroke-width: 2;
+      stroke: #bd0926;
+      font-size: 140px;
+  }
+  @keyframes stroke {
+      0%   {
+          fill: rgba(72,138,20,0); stroke: rgba(189,9,38,1);
+          stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+          }
+      70%  {fill: rgba(72,138,20,0); stroke: rgba(189,9,38,1); }
+      80%  {fill: rgba(72,138,20,0); stroke: rgba(189,9,38,1); stroke-width: 3; }
+      100% {
+          fill: rgba(189,9,38,1); stroke: rgba(189,9,38,0); 
+          stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+          }
+  }
